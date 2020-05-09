@@ -12,4 +12,10 @@ namespace Chinook.Models
         public string BillingCountry { get; set; }
         public decimal Total { get; set; }
     }
+
+    public class InvoiceTotalByCountry
+    {
+        public string BillingCountry { get; set; }
+        public decimal Total { get; set; }
+    }
 }

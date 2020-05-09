@@ -27,5 +27,34 @@ namespace Chinook.Controllers
             return Ok(invoices);
 
         }
+
+        //api/sales/
+        [HttpGet("1")]
+        public IActionResult GetInvoicesWithCustomersAndTracks()
+        {
+            var invoices = _repository.GetInvoicesWithCustomersAndTracks();
+            var isEmpty = !invoices.Any();
+            if (isEmpty)
+            {
+                return NotFound("No invoices found in that country");
+            }
+            return Ok(invoices);
+
+        }
+
+        //api/sales/
+        [HttpGet("2")]
+        public IActionResult GetInvoicesWithCustomersAndTracksPart2()
+        {
+            var invoices = _repository.GetInvoicesWithCustomersAndTracksPart2();
+            var isEmpty = !invoices.Any();
+            if (isEmpty)
+            {
+                return NotFound("No invoices found in that country");
+            }
+            return Ok(invoices);
+
+        }
+
     }
 }
